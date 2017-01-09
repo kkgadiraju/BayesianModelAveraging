@@ -8,7 +8,7 @@ library(foreign)
 
 
 
-myImg<-readGDAL('../data/training/2015-04-19-AllBands-Clipped.tif')
+myImg<-readGDAL('../training/2016-01-16-AllBands-Clipped.tif')
 myImgData <- myImg@data
 colnames(myImgData) <- c("Aerosol","B","G","R","NIR","SWIR1","SWIR2","Cirrus")
 allData <- myImgData
@@ -19,6 +19,7 @@ allData$Class <-x2
 outputData <- allData
 outputData$Class <- as.factor(outputData$Class)
 
-write.csv(x=outputData,file = '../data/training/2015-04-19-AllBands.csv',row.names = F)
-write.arff(outputData,file='../data/training/2015-04-19-AllBands.arff',relation='testing')
+outputData <- outputData[,c("Class","Aerosol","B","G","R","NIR","SWIR1","SWIR2","Cirrus")]
+write.csv(x=outputData,file = '../training/2016-01-16-AllBands.csv',row.names = F)
+write.arff(outputData,file='../training/2016-01-16-AllBands.arff',relation='testing')
 
