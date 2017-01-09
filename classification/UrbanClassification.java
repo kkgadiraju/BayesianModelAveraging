@@ -84,7 +84,8 @@ public class UrbanClassification {
 						break;
 					default:
 						System.out.println("Incompatible classifier name given, using Naive Bayes by default");
-						cModel = (Classifier) new NaiveBayes(); //Set to naive bayes by default
+						System.exit(0);
+						//cModel = (Classifier) new NaiveBayes(); //Set to naive bayes by default
 
 				}
 				cModel.buildClassifier(trData);
