@@ -18,7 +18,7 @@ java -cp weka.jar:. UrbanClassification  $f11 $f12 "nbayes"
 wait
 
 
-java -cp weka.jar:. UrbanClassification  $f11 $12 "j48"
+java -cp weka.jar:. UrbanClassification $f11 $f12 "j48"
 
 wait
 
@@ -43,7 +43,7 @@ java -cp weka.jar:. UrbanClassification  $f21 $f22 "nbayes"
 wait
 
 
-java -cp weka.jar:. UrbanClassification  $f21 $22 "j48"
+java -cp weka.jar:. UrbanClassification $f21 $f22  "j48"
 
 wait
 
@@ -70,7 +70,7 @@ java -cp weka.jar:. UrbanClassification  $f31 $f32 "nbayes"
 wait
 
 
-java -cp weka.jar:. UrbanClassification  $f31 $32 "j48"
+java -cp weka.jar:. UrbanClassification  $f31 $f32 "j48"
 
 wait
 
@@ -95,7 +95,7 @@ java -cp weka.jar:. UrbanClassification  $f41 $f42 "nbayes"
 wait
 
 
-java -cp weka.jar:. UrbanClassification  $f41 $42 "j48"
+java -cp weka.jar:. UrbanClassification  $f41 $f42 "j48"
 
 wait
 
