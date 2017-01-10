@@ -33,7 +33,7 @@ calculateDiscriminant <- function(j,d,means,apriori){
   
   currentMean <- means[[i]]
   currentMat <- as.matrix(current - currentMean)
-  disc[j,i] <<- -0.5*(currentMat)%*%(solve(covInv[[i]]))%*%(t(currentMat))+log(apriori[i])-(5/2)*log(2*pi)- (1/2)*covDets[i]
+  disc[j,i] <<- -0.5*(currentMat)%*%(covInv[[i]])%*%(t(currentMat))+log(apriori[i])-(5/2)*log(2*pi)- (1/2)*covDets[i]
   sum = sum + disc[j,i];
 	}
   for(k in 1:4){
@@ -79,7 +79,7 @@ MLE <- function(training){
   
   sapply(1:nrow(data.1), calculateDiscriminant, data.1,means, apriori)
   
- write.csv(file='../training/mlc-results.csv',x = disc, row.names=F)  
+ write.csv(file='../training/2015-04-19-mlc-results.csv',x = disc, row.names=F)  
   
   
 }
