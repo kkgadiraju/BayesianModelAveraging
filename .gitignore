@@ -42,3 +42,8 @@ vignettes/*.pdf
 *.arff
 
 training/
+
+mlc1.R
+mlc2.R
+mlc3.R
+mlcTraining.R
